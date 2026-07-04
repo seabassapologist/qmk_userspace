@@ -65,11 +65,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [AD] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
-        KC_NO,   KC_NO, RGB_M_T, RGB_M_G, RGB_M_X, RGB_M_K,                      RGB_HUI, RGB_SAI, RGB_VAI, RGB_SPI, RGB_MOD,   KC_NO,
+        KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,                      RM_HUEU, RM_SATU, RM_VALU, RM_SPDU, RM_NEXT,   KC_NO,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-        KC_NO,RGB_M_SN,RGB_M_SW, RGB_M_R, RGB_M_B, RGB_M_P,                      RGB_HUD, RGB_SAD, RGB_VAD, RGB_SPD,RGB_RMOD,   KC_NO,
+        KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,                      RM_HUED, RM_SATD, RM_VALD, RM_SPDD, RM_PREV,   KC_NO,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-       EE_CLR,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,                      RGB_TOG,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,
+       EE_CLR,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,                      RM_TOGG,   RM_ON,  RM_OFF,   KC_NO,   KC_NO,   KC_NO,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
                                           QK_BOOT,   KC_NO, KC_TRNS,   KC_TRNS,    KC_NO,   KC_NO
                                       //`--------------------------'  `--------------------------'
@@ -86,9 +86,9 @@ layer_state_t layer_state_set_user(layer_state_t state) {
 
 oled_rotation_t oled_init_user(oled_rotation_t rotation) {
   if (is_keyboard_master()) {
-    return OLED_ROTATION_180;  // flips the display 180 degrees if offhand
+    return OLED_ROTATION_0;  // flips the display 180 degrees if offhand
   }
-  return OLED_ROTATION_0;
+  return OLED_ROTATION_180;
 }
 
 bool oled_task_user(void) {

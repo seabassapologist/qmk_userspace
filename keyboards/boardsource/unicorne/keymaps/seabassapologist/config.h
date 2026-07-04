@@ -1,9 +1,8 @@
 #pragma once
 
-#define MASTER_RIGHT
+#define MASTER_LEFT
 
 #define TAPPING_TERM 150
-
 #define RGB_MATRIX_TIMEOUT 300000
 #define RGB_MATRIX_DEFAULT_HUE 232
 #define RGB_MATRIX_DEFAULT_SAT 255
